@@ -2,12 +2,13 @@
 
 import React, { Component } from 'react';
 import FadeInView from './FadeInView';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StatusBar, StyleSheet, Text, View } from 'react-native';
 
 class SplashScreen extends Component {
   render () {
     let splashView = (
       <View style={styles.container}>
+        <StatusBar hidden={true} />
         <View style={styles.container}>
           <Image style={styles.img} source={require('../../image/logo.png')}/>
           <Text style={styles.appName}>我の智家</Text>

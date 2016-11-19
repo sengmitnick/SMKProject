@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import SplashScreen from './SplashScreen';
 import FadeInView from './FadeInView';
-import Render from './AppRender';
+import Main from './Main';
 import { Image, Text, View } from 'react-native';
 
 export default class App extends Component {
@@ -23,9 +23,8 @@ export default class App extends Component {
   }
   render () {
     if (this.state.splashed){
-      let childrenView = Render.call(this, this.props, this.state);
       return (
-        <FadeInView children={childrenView} />
+        <Main />
       );
     }else{
       return (
